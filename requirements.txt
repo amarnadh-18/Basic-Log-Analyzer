@@ -1,0 +1,5 @@
+matplotlib
+numpy
+tkinter # Note: Only needed for macOS and Linux. For Windows, tkinter comes pre-installed with Python.
+PIL
+scikit-learn

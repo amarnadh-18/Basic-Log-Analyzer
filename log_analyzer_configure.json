@@ -1,0 +1,28 @@
+{
+    "patterns": {
+        "malware": "\\b(malware|virus|trojan|ransomware|worm|spyware|adware|rootkit|keylogger|backdoor|botnet|bot|exploit|zero-day|advanced persistent threat|APT|malicious software|malicious code)\\b",
+        "file_tampering": "\\b(file tampering|unauthorized file modification|file modified|file altered|file changed|file tampered|file corruption|unauthorized access|unauthorized modification|file integrity failure|checksum mismatch)\\b",
+        "unauthorized_access": "\\b(unauthorized access|login failure|invalid login|access denied|brute force|credential stuffing|account hijacking|session hijacking|incorrect password|access violation|login attempt failed|user not found|invalid credentials|authentication failure|incorrect password attempts)\\b",
+        "security_breach": "\\b(security breach|data breach|intrusion detected|unauthorized entry|system intrusion|access breach|network breach|unauthorized system access|data exfiltration|compromise detected|confidentiality violation)\\b",
+        "advanced_malware": "\\b(zero-day|rootkit|advanced persistent threat|APT|polymorphic malware|fileless malware|spear-phishing|advanced hacking tools|privilege escalation|stealth malware|undetectable malware|memory resident malware)\\b",
+        "phishing": "\\b(phishing|spear phishing|fraudulent email|email scam|spoofed email|phishing attempt|fake login page|social engineering attack|phishing link|fake notification|phishing campaign|scam website|email impersonation)\\b",
+        "data_leakage": "\\b(data leakage|data exfiltration|information leak|data breach|data theft|unauthorized data access|data loss|sensitive data leak|confidentiality breach|data disclosure|personal data leak|leak of sensitive data)\\b",
+        "dos_attack": "\\b(Denial of Service|DoS|DDoS|distributed denial of service|flood attack|service disruption|bandwidth exhaustion|resource depletion|flooding attack|TCP SYN flood|UDP flood|ping of death|slowloris)\\b",
+        "Cross_Site_Scripting(XSS)": "(<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>|on\\w+\\s*=\\s*[\"\\']?[^\"\\'>]+[\"\\']?|javascript:)",
+        "sql_injection": "(\\bUNION\\b|\\bSELECT\\b|\\bINSERT\\b|\\bUPDATE\\b|\\bDELETE\\b|\\bDROP\\b|\\bOR\\b\\s+\\d+=\\d+|--|#|/\\*|\\*/|xp_cmdshell|sp_executesql|char\\(|nchar\\(|varchar\\(|nvarchar\\(|alter\\s+table|create\\s+table|information_schema|sleep\\(|benchmark\\()",
+        "Brute_Force": "Failed password for .* from (?P<ip>\\d{1,3}(?:\\.\\d{1,3}){3})"
+    },
+    "remedies": {
+        "malware": "Remedy: Run a full system antivirus scan, isolate the affected systems, and update your antivirus software.",
+        "file_tampering": "Remedy: Restore the affected files from backup, change file permissions, and monitor file integrity.",
+        "unauthorized_access": "Remedy: Reset passwords, implement multi-factor authentication, and review access logs.",
+        "security_breach": "Remedy: Disconnect affected systems from the network, conduct a thorough investigation, and notify affected parties.",
+        "advanced_malware": "Remedy: Employ advanced threat detection tools, perform a deep system scan, and update security protocols.",
+        "phishing": "Remedy: Educate users about phishing, implement email filtering solutions, and report the phishing attempt.",
+        "data_leakage": "Remedy: Identify the source of the leak, implement data loss prevention solutions, and review data access policies.",
+        "Cross_Site_Scripting(XSS)": "Remedy: Validate and sanitize all user inputs, Implement a strict Content Security Policy (CSP).",
+        "dos_attack": "Remedy: Configure firewalls to filter out malicious traffic, use rate limiting to prevent overloading, and implement robust network security measures.",
+        "sql_injection": "Remedy: Sanitize all user inputs, use prepared statements, and implement web application firewalls.",
+        "Brute_Force": "Enable account lockouts, enforce strong passwords, use two-factor authentication, limit login attempts, deploy CAPTCHAs, monitor/block suspicious IPs, and keep systems updated."
+    }
+}
