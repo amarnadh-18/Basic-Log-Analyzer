@@ -1,3 +1,0 @@
-Total lines processed: 90
-
-No suspicious activity detected.
